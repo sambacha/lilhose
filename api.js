@@ -4,8 +4,8 @@ export default class Api {
   constructor(timeout=5e3, maxAttempts=5) {
     this.timeout = timeout;
     this.maxAttempts = maxAttempts;
-    this._baseUrl = 'wss://firehose.finance.com:9443/ws/';
-    this._combinedBaseUrl = 'wss://firehose.finance.com:9443/stream?streams=';
+    this._baseUrl = 'wss://stream.firehose.finance.com:9443/ws/';
+    this._combinedBaseUrl = 'wss://stream.firehose.finance.com:9443/stream?streams=';
     this.subscription = {};
     this.streams = {
       depth: (symbol) => `${symbol.toLowerCase()}@depth`,
